@@ -27,13 +27,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
           
+      # É invenção do Sidney
       - name: Install dependencies
         run: yarn
 
       - name: Build
         run: yarn build
 
-      # (Não) é invenção do Sidney
+      # Não é invenção do Sidney
       - name: Install Vercel CLI
         run: yarn --global vercel@latest
       
@@ -45,3 +46,9 @@ jobs:
       
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Install Newman
+        run: npm i -g newman
+
+      - name: Run tests
+        run: newman run contacts.postman_collection.json

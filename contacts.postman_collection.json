@@ -418,7 +418,7 @@
 	"variable": [
 		{
 			"key": "baseURL",
-			"value": "http://localhost:3001",
+			"value": "https://exemplo-cicd-api.vercel.app",
 			"type": "string"
 		},
 		{
