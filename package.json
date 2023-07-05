@@ -1,5 +1,5 @@
 {
-  "name": "exemplo-cicd-api",
+  "name": "exemplo-ci-cd-api",
   "version": "1.0.0",
   "main": "src/index.ts",
   "license": "MIT",
